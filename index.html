@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABTV</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/500/tv.png" />
+</head>
+
+<body>
+    <div class="overlaybody"> </div>
+    <header>
+
+        <div id="barra">
+
+            <div id="social">
+                <a href="#"><img src="/immagini/Instagram-logo.png" id="instalogo"></a>
+                <a href="#"><img src="/immagini/logo-fb.png" id="fblogo"></a>
+            </div>
+
+            <a href="index.html" id="logo"><img src="/immagini/logo-labfortraining.png"></a>
+        </div>
+
+
+        <nav id="menu">
+            <ul>
+                <li id="login"><a href="#">Login</a></li>
+                <li id="home"><a href="/index.html">Home</a></li>
+                <li id="contatti"><a href="#">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home">
+        <h2>Home</h2>
+
+        <h3>In vetrina</h3>
+        <div id="vetrina">
+            <a id="avanti">></a>
+            <a id="indietro">&#60;</a>
+            <div id="boxSlider">
+            </div>
+        </div>
+
+
+        <h3>Catalogo</h3>
+        <div id="cards">
+        </div>
+    </div>
+
+
+    <div id="filmBox">
+        <span id="chiudi">X</span>
+        <h2 id="filmTitolo"></h2>
+        <div id="filmTrailer"></div>
+        <div id="filmTrama"></div>
+    </div>
+
+    <div id="serieBox">
+        <span id="chiudi">X</span>
+        <h2 id="serieTitolo"></h2>
+        <div id="serieTrailer"></div>
+        <div id="serieTrama"></div>
+    </div>
+
+
+
+    <div id="boxLogin">
+        <span id="chiudi">X</span>
+        <h2>Login</h2>
+        <div id="moduloLogin">
+            <form id="login" action="/login.java" method="post"> <br>
+                <label for="email">Inserisci email</label>
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <div id="divLogEmail" class="errore">Inserire mail valida</div> <br>
+                <label for="password">Inserisci password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button>Login</button>
+            </form>
+            <a href="#">Password dimenticata</a>
+            <a href="#" id="registrati">Registrati</a>
+        </div>
+    </div>
+
+    <div id="boxRegistrazione">
+        <span id="chiudi">X</span>
+        <h2>Registrati</h2>
+        <div id="moduloRegistrazione">
+            <form id="registrazione" action="/registrazione.java" method="post">
+                <label for="email">Inserisci email</label>
+                <input type="email" name="email" id="email1" placeholder="E-mail">
+                <div id="regErrEmail" class="errore">Inserire un'email valida</div>
+
+                <label for="password1">Inserisci password</label>
+                <span id="passInfo">La password deve contenere almeno 8 caratteri, tra cui un numero ed una
+                    lettera</span>
+                <input type="password" name="password" id="password1" placeholder="Password">
+                <div id="regErrPass1" class="errore">La password deve contenere almeno 8 caratteri tra cui una lettera
+                    ed un numero</div>
+
+                <label for="password2">Ripeti password</label>
+                <input type="password" name="password" id="password2" placeholder="Password">
+                <div id="regErrPass2" class="errore">La password non corrisponde alla precedente</div>
+
+                <a href="">Accetti la normativa sulla privacy?</a>
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <div id="regErrCheck" class="errore">E' necessario accettare la policy per registrarsi</div>
+                <button>Registrati</button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div id="boxContatti">
+        <h3>Modulo contatti</h3>
+        <span id="chiudi">X</span>
+        <div id="moduloContatti">
+            <form action="/contatti.java" id="invioContatti">
+                <label for="nome">Nome</label>
+                <input type="text" placeholder="Nome" name="nome" id="contNome">
+                <div class="errore" id="divContNome">Inserire un nome valido</div>
+
+                <label for="cognome">Cognome</label>
+                <input type="text" placeholder="Cognome" name="cognome" id="contCognome">
+                <div class="errore" id="divContCognome">Inserire un cognome valido</div>
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" name="email" id="contEmail">
+                <div class="errore" id="divContEmail">Inserire un'email valida</div>
+
+                <label for="cellulare">Cellulare</label>
+                <input type="tel" placeholder="Cellulare" name="cellulare" id="contCell">
+                <div class="errore" id="divContCell">Inserire un numero di cellulare di soli numeri</div>
+
+                <textarea name="messaggio" id="messaggio" cols="30" rows="10"
+                    placeholder="Scrivi qui il messaggio che vuoi porre alla nostra attenzione e sarai ricontattato al più presto"></textarea>
+                <div class="errore" id="divMess">Inserire un messaggio da inviare</div>
+
+                <button>Invia</button>
+            </form>
+        </div>
+    </div>
+
+    <span id="tornaSu">^</span>
+
+    <script src="/index.js">
+    </script>
+</body>
+
+</html>
